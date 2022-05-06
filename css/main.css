@@ -171,6 +171,7 @@ header {
     top: -60px;
     margin: 0 auto;
 }
+
 .catalog-wrapper {
     width: 1200px;
     margin: 0 auto;
@@ -320,7 +321,8 @@ header {
     left: -400px;
 }
 
-.left-content p:first-child {
+.left-content p:first-child,
+.left-content-section p:first-child {
     display: inline-block;
     color: #2E363E;
     font-style: normal;
@@ -333,7 +335,8 @@ header {
     background: #F2F6FA;
 }
 
-.left-content h3 {
+.left-content h3,
+.left-content-section h4 {
     font-style: normal;
     font-weight: 500;
     font-size: 50px;
@@ -350,25 +353,159 @@ header {
     letter-spacing: -0.2px;
     color: #FFFFFF;
 }
-[type="file"] {
+
+[type="file"],
+[type="button"] {
     height: 0;
-    overflow: hidden;
+    visibility: hidden;
     width: 0;
     margin-top: 70px;
-  }
-  
-  [type="file"] + label {
+}
+
+[type="file"]+label,
+[type="button"]+label {
     background: #FED84C;
     border: none;
     border-radius: 8px;
     color: #2E363E;
     cursor: pointer;
-    display: inline-block;
-      font-size: 18px;
+    /* display: inline-block; */
+    font-size: 18px;
     font-weight: 500;
     outline: none;
     padding: 30px 50px;
     position: relative;
-    transition: all 0.3s;
     vertical-align: middle;
-  }
+}
+
+/* second content section */
+
+.second-content-wrapper {
+    width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.second-section-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.left-content-section {
+    width: 580px;
+    padding: 0px 20px 0 0;
+}
+
+.left-content-section h4 {
+    padding: 24px 0 36px 0;
+}
+
+.left-content-section ul {
+    width: 530px;
+}
+
+.left-content-section li {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #2E363E;
+}
+
+.left-content-section li::before {
+    content: "";
+    position: relative;
+    left: -10px;
+    top: 0;
+    background: #5D6AFB;
+    font-weight: 900;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin-left: -10px;
+}
+
+.left-content-section li+li {
+    padding: 30px 0 0px 0;
+}
+
+.right-content-section {
+    text-align: center;
+    position: relative;
+    margin-top: -100px;
+}
+
+.right-content-section img::before {
+    content: "";
+    width: 100px;
+    height: 20px;
+    background: #2E363E;
+}
+
+.manager-name {
+    position: absolute;
+    top: 68%;
+    left: -80px;
+}
+figure {
+    display: inline-block;
+}
+
+.figure-name {
+    background: #2E363E;
+    display: inline-block;
+    transform: skewX(-10deg);
+    border-radius: 5px;
+}
+.figure-prof {
+    background: #F2F6FA;
+    display: inline-block;
+    transform: skewX(-10deg);
+    border-radius: 5px;
+}
+
+.figure-name p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+    padding: 15px;
+
+}
+
+.figure-prof p {
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+letter-spacing: 1px;
+text-transform: uppercase;
+color: #2E363E;
+padding: 15px;
+}
+
+.right-content-section::after {
+    content: " ";
+    position: absolute;
+    z-index: -2;
+    right: 0px;
+    top: 100px;
+    width: 580px;
+    height: 580px;
+    background: url(../img/berry_leaf/woman-berry.svg) no-repeat;
+}
+
+.right-content-section::before {
+    content: " ";
+    position: absolute;
+    top: 224px;
+    z-index: -1;
+    width: 580px;
+    height: 580px;
+    border-radius: 100%;
+    background: #FED84C;
+}
